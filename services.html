@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about ShahzadaSEO - Your trusted partners in SEO growth and digital marketing success">
+    <meta name="keywords" content="about us, SEO company, digital marketing team, ShahzadaSEO">
+    <title>About Us - SEO PRO| Your Partners in Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* services overview  */
+        .services-overview {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, #5a4fcf 100%);
+            position: relative;
+        }
+
+        .services-overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(254, 208, 2, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .services-overview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-overview-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: var(--primary-white);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(254, 208, 2, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .service-item:nth-child(1) { animation-delay: 0.2s; }
+        .service-item:nth-child(2) { animation-delay: 0.4s; }
+        .service-item:nth-child(3) { animation-delay: 0.6s; }
+        .service-item:nth-child(4) { animation-delay: 0.8s; }
+        .service-item:nth-child(5) { animation-delay: 1.0s; }
+        .service-item:nth-child(6) { animation-delay: 1.2s; }
+        .service-item:nth-child(7) { animation-delay: 1.4s; }
+        .service-item:nth-child(8) { animation-delay: 1.6s; }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-yellow);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-white);
+        }
+
+        .service-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+       
+        /* Animations */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .mission-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .mission-visual {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero-content,
+            .mission-container,
+            .services-overview-container,
+            .team-container {
+                padding: 0 1rem;
+            }
+
+            .about-title {
+                font-size: 3rem;
+            }
+
+            .about-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .about-description {
+                font-size: 1.1rem;
+            }
+
+            .mission-title,
+            .services-overview-title,
+            .team-title {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-section,
+            .services-overview,
+            .team-section {
+                padding: 4rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+
+            .mission-title,
+            .services-overview-title,
+            .team-title {
+                font-size: 2rem;
+            }
+
+            .service-item,
+            .team-member {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+    <!-- Services Overview Section -->
+    <section class="services-overview">
+        <div class="services-overview-container">
+            <h2 class="services-overview-title">Our Comprehensive Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="service-title">SEO Audit</h3>
+                    <p class="service-description">Uncover hidden issues & opportunities with comprehensive website analysis.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-title">Technical SEO</h3>
+                    <p class="service-description">Fix performance bottlenecks that hold back rankings and user experience.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="service-title">On-Page SEO</h3>
+                    <p class="service-description">Optimize content that both Google and your customers love.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="service-title">Link Building</h3>
+                    <p class="service-description">Build real authority with safe, high-quality backlinks.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="service-title">Local SEO</h3>
+                    <p class="service-description">Get found by nearby customers searching right now.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="service-title">Monthly SEO</h3>
+                    <p class="service-description">Continuous optimization that adapts as Google evolves.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="service-title">SEO Consultant</h3>
+                    <p class="service-description">Expert guidance tailored to your business needs.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                    <h3 class="service-title">Outreach Links</h3>
+                    <p class="service-description">Secure brand mentions & traffic from trusted sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <h2 class="team-title">Meet Our Expert Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">SEO Strategist</h3>
+                    <p class="member-role">Lead SEO Expert</p>
+                    <p class="member-description">Specialized in technical SEO and algorithm updates, with 8+ years of experience in driving organic growth.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="member-name">Link Building Specialist</h3>
+                    <p class="member-role">Outreach Expert</p>
+                    <p class="member-description">Expert in building high-quality backlinks and digital PR strategies that boost domain authority.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="member-name">Analytics Expert</h3>
+                    <p class="member-role">Data Analyst</p>
+                    <p class="member-description">Focused on performance tracking, ROI analysis, and providing actionable insights for business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('[class*="animate-"], .service-item, .team-member').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add typing effect to title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', function() {
+            const titleElement = document.querySelector('.about-title');
+            const originalText = titleElement.textContent;
+            setTimeout(() => {
+                typeWriter(titleElement, originalText, 80);
+            }, 500);
+        });
+
+        // Add hover effects to service items
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add hover effects to team members
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            member.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
