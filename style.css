@@ -15,6 +15,17 @@
     --primary-orange: rgb(240, 73, 7);
     --light-pink: rgb(214, 91, 112);
     --dark-bg: #0a0a0a;
+  
+    /* fonts to use  */
+    
+        --font-poppins: 'Poppins', sans-serif;
+        --font-montserrat: 'Montserrat', sans-serif;
+        --font-bebas: 'Bebas Neue', sans-serif;
+        --font-playfair: 'Playfair Display', serif;
+        --font-oswald: 'Oswald', sans-serif;
+        --font-raleway: 'Raleway', sans-serif;
+        --font-lobster: 'Lobster', cursive;
+      
     
 }
 
@@ -42,8 +53,8 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(135deg, var(--primary-azure) 0%, var(--sec-azure) 50%, var(--primary-azure) 100%);
-/* background-color: #fed002; */
+ 
+background-color: var(--sec-azure);
     z-index: -3;
 }
 
@@ -266,6 +277,9 @@ body {
 }
 
 .nav-links a:hover {
+    border: solid 1px var(--sec-azure);
+    padding: 10px;
+    border-radius: 50px;
     color: var(--primary-white);
     background-color: var(--sec-azure);
     
@@ -274,7 +288,6 @@ body {
  
 }
  /* on hover translate sclae should increase on hover. and the color of text should be yellow when background is purple and vice versa.  */
-
 
 
 .nav-links a::after {
@@ -544,10 +557,10 @@ body {
 .about{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-        /* Mission Section */
+ /* Mission Section */
         .mission-section {
             padding: 8rem 2rem;
-            background: white;
+      
             position: relative;
         }
 
@@ -555,9 +568,10 @@ body {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr ;
             gap: 4rem;
             align-items: center;
+            
         }
 
         .mission-content {
@@ -569,16 +583,14 @@ body {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 2rem;
-            background: linear-gradient(45deg, var(--primary-purple), var(--primary-yellow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+            color: #347e92;
+            
+         }
 
         .mission-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--primary-purple);
+            color: var(--sec-azure);
             font-weight: 500;
             margin-bottom: 2rem;
         }
@@ -641,10 +653,104 @@ body {
         }
 
 
+/* Mission Section */
+.mission-section {
+    padding: 8rem 2rem;
+    background: var(--primary-white);
+    position: relative;
+}
+
+.mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mission-content {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.mission-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    
+    color: var(--sec-azure);
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--sec-azure);
+    margin-bottom: 2rem;
+}
+
+.mission-highlight {
+   background: var(--sec-azure);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.mission-visual {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+.mission-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--sec-azure), var(--primary-azure) , transparent , rgb(221, 69, 115) );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.mission-card:hover {
+    transform: scale(1.02);
+
+}
+
+.mission-card-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.mission-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.mission-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.mission-card-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
 /* Services Section */
 .services {
     padding: 8rem 2rem;
-    background-color: white;
+    background-color: rgb(238, 226, 226);
     position: relative;
     
    
@@ -663,10 +769,8 @@ body {
     margin-bottom: 3rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
-    background: linear-gradient(45deg, var(--primary-purple), var(--primary-yellow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #347e92;
+      font-family: var(--font-raleway);
 }
 
 .services-grid {
@@ -679,12 +783,15 @@ body {
 .service-card {
   
     backdrop-filter: blur(10px);
-    border: 1px solid purple;
+    border: 1px solid var(--sec-azure);
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
     opacity: 0;
     transform: translateY(100px);
+    display:grid;
+    align-items: center;
+    justify-content: center;
    
 
 }
@@ -695,12 +802,12 @@ body {
     transform: translateY(-10px);
    
     box-shadow: 0 20px 40px rgba(117, 95, 212, 0.2);
-    border-color: var(--primary-yellow);
+    border-color: purple;
 }
 
 .service-icon {
     font-size: 3rem;
-    color: var(--primary-yellow);
+    color: var(--sec-azure);
     margin-bottom: 1rem;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -709,18 +816,29 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--primary-purple);   
+    color: var(--sec-azure);   
 }
 
 .service-card p {
-    color: var(--text-dark);
+    color: var(--sec-azure);
     line-height: 1.6;
+}
+.service-btn{
+    padding: 10px;
+    border: solid 1px var(--sec-azure);
+    border-radius: 50px;
+    background-color: var(--sec-azure);
+    color: var(--primary-white);
+}
+a{
+    text-decoration: none;
+    color: var(--primary-white);
 }
 
 /* Stats Section */
 .stats {
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--primary-purple) 0%, #5a4fcf 100%);
+   background-color: var(--sec-azure);
     position: relative;
 }
 
@@ -741,7 +859,7 @@ body {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--primary-yellow);
+    color: var(--primary-white);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -915,6 +1033,33 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
@@ -949,6 +1094,16 @@ body {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .mission-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .mission-visual {
+        height: 400px;
     }
 
     .services-grid {
