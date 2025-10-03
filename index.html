@@ -29,7 +29,7 @@
                 </li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#Blog">Blog</a></li>
-                <li><a href="#Partnership" style="border: solid 1px rgb(60, 187, 219); padding: 10px; border-radius: 20px; background: linear-gradient(135deg, var(--sec-azure), var(--primary-azure)  , rgb(238, 173, 193) ) ; color: rgb(253, 250, 250); animation: gradientShift 8s ease infinite;">Meet Our Team</a></li>
+                <li><a href="#Partnership" style="border: solid 1px rgb(29, 17, 189); padding: 10px; background: white; color: rgb(25, 12, 148); animation: gradientShift 8s ease infinite; ">Meet Our Team</a></li>
 
 
 
@@ -86,23 +86,20 @@
             <h2 class="brands-title">Trusted by leading brands</h2>
             <div class="brands-slider" aria-label="Trusted brands logos carousel">
                 <div class="brands-track">
-                    <img src="pic2.png" alt="Brand 1">
+                    <img src="pic2.png" alt="Brand 6">
                     <img src="pic3.png" alt="Brand 2">
                     <img src="pic4.png" alt="Brand 3">
                     <img src="pic5.png" alt="Brand 4">
                     <img src="pic6.png" alt="Brand 5">
-                    <img src="pic9.png" alt="Brand 6">
-                    <img src="pic10.png" alt="Brand 7">
-                    <img src="pic11.png" alt="Brand 8">
+                    
                     <!-- duplicate for seamless loop -->
                     <img src="pic2.png" alt="Brand 1 duplicate" aria-hidden="true">
                     <img src="pic3.png" alt="Brand 2 duplicate" aria-hidden="true">
                     <img src="pic4.png" alt="Brand 3 duplicate" aria-hidden="true">
                     <img src="pic5.png" alt="Brand 4 duplicate" aria-hidden="true">
                     <img src="pic6.png" alt="Brand 5 duplicate" aria-hidden="true">
-                    <img src="pic9.png" alt="Brand 6 duplicate" aria-hidden="true">
-                    <img src="pic10.png" alt="Brand 7 duplicate" aria-hidden="true">
-                    <img src="pic11.png" alt="Brand 8 duplicate" aria-hidden="true">
+                    <img src="pic2.png" alt="Brand 5 duplicate" aria-hidden="true">
+                    
                 </div>
             </div>
         </div>
@@ -263,16 +260,60 @@
    
 
 <!-- consultation booking page  -->
- <div class="consult">
-    <h1> BOOK A CONSULTATION WITH US </h1>
-    <p>Take the first step toward better backlinks and stronger SEO.</p>
-    <h3> HERE IS WHAT CAN YOU EXPECT FROM US?</h3>
-    <div class="consult-box">
-        <div class="right">
-            <img src="pic13.png" alt="Consultation right">
-        </div>
+ 
+<section class="consult-page">
+
+  <header class="consult-hero">
+    <div class="consult-hero-content">
+      <h1>Grow Your Business with SEO Backlinks</h1>
+      <p>We help brands dominate Google rankings with powerful backlink strategies. Book a free consultation today and see how we can scale your traffic.</p>
+      <button class="consult-btn" onclick="document.getElementById('consult-form-section').scrollIntoView({behavior:'smooth'})">Book a Free Consultation</button>
     </div>
- </div>
+  </header>
+
+  <section class="consult-info-section">
+    <div class="consult-info-card fade-in">
+      <i class="fas fa-chart-line"></i>
+      <h3>Proven Results</h3>
+      <p>We’ve ranked 100+ businesses on the first page of Google using strategic backlinks.</p>
+    </div>
+    <div class="consult-info-card fade-in">
+      <i class="fas fa-handshake"></i>
+      <h3>Trusted Agency</h3>
+      <p>Our clients span across multiple industries worldwide with consistent success stories.</p>
+    </div>
+    <div class="consult-info-card fade-in">
+      <i class="fas fa-dollar-sign"></i>
+      <h3>Affordable Packages</h3>
+      <p>We provide flexible pricing tailored to startups, SMEs, and large enterprises.</p>
+    </div>
+    <div class="consult-info-card fade-in">
+      <i class="fas fa-globe"></i>
+      <h3>Global Reach</h3>
+      <p>Our SEO services are not limited by borders — we help businesses grow everywhere.</p>
+    </div>
+  </section>
+
+  <section id="consult-form-section" class="consult-form-section">
+    <h2>Book Your Consultation</h2>
+    <p>Fill out the form below and let’s discuss how we can grow your business together.</p>
+
+    <div class="consult-form-card fade-in">
+      <form id="consultationForm" class="consult-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+          <option value="">Select Service</option>
+          <option value="seo">SEO Audit</option>
+          <option value="backlinks">Backlink Strategy</option>
+          <option value="full">Full SEO Package</option>
+        </select>
+        <textarea placeholder="Tell us about your business..." rows="4" required></textarea>
+        <button type="submit">Book Consultation</button>
+      </form>
+    </div>
+  </section>
+
 
 
 
@@ -479,6 +520,32 @@
             el.style.setProperty('--stagger', idx);
             premiumObserver.observe(el);
         });
+
+        
+    // consultaion page script here 
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    // Form submit handler
+    document.getElementById("consultationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Thank you! Your consultation has been booked.");
+    });
+  
     </script>
 </body>
 </html>

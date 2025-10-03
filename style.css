@@ -11,7 +11,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 800;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     margin-bottom: 1.25rem;
 }
 .brands-slider{
@@ -27,14 +27,13 @@
 .brands-track img{
     height: 56px;
     width: auto;
-    filter: grayscale(100%) contrast(85%);
+    
     opacity: 0.9;
     transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 .brands-track img:hover{
-    filter: grayscale(0%) contrast(100%);
-    opacity: 1;
-    transform: scale(1.05);
+    
+    transform: scale(1.3);
 }
 @keyframes slideBrands{
     0%{ transform: translateX(0); }
@@ -54,10 +53,10 @@
 .premium-hero h1{
     font-size: clamp(2rem, 4.8vw, 3.2rem);
     font-weight: 800;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
 }
 .premium-hero p{
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     opacity: 0.9;
     margin-top: 0.75rem;
 }
@@ -103,7 +102,7 @@
     width: 96px;
     height: 96px;
     border-radius: 22px;
-    background: linear-gradient(135deg, var(--primary-azure), var(--sec-azure));
+    background: linear-gradient(135deg, var(--primary-azure), var(--sec-blue));
     display: grid;
     place-items: center;
     color: white;
@@ -118,12 +117,12 @@
     padding: 1.25rem 1.5rem;
 }
 .flow-content h3{
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 .flow-content p{
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     opacity: 0.95;
 }
 @media (max-width: 900px){
@@ -149,7 +148,7 @@
 
 :root {
     --primary-azure: #31a2b3;
-    --sec-azure: #347e92;
+    --sec-blue: #150e82;
     --primary-white: #ffffff;
     --text-light: #f8f9fa;
     --primary-yellow: #fed002;
@@ -196,7 +195,7 @@ body {
     width: 200%;
     height: 200%;
  
-background-color: var(--sec-azure);
+background-color: var(--sec-blue);
     z-index: -3;
 }
 
@@ -373,14 +372,14 @@ background-color: var(--sec-azure);
     padding: 1rem 2rem;
     /* this is the original background color  */
     background-color: var(--primary-white);
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     z-index: 1000;
     height: 100px;
     transition: all 0.2s ease;
 }
 
 .navbar.scrolled {
-    background: var(--sec-azure);
+    background: var(--sec-blue);
     color: var(--primary-white);
     box-shadow: 0 2px 20px rgba(117, 95, 212, 0.1);
 }
@@ -397,7 +396,7 @@ background-color: var(--sec-azure);
     font-size: 1.8rem;
     font-weight: 800;
     /* background: linear-gradient(45deg, var(--primary-purple), var(--primary-yellow)); */
-       color: var(--sec-azure);
+       color: var(--sec-blue);
        color: rgb(2, 57, 83);
 }
 
@@ -419,16 +418,17 @@ background-color: var(--sec-azure);
 }
 
 .nav-links a:hover {
-    border: solid 1px var(--sec-azure);
+    border: solid 1px var(--sec-blue);
     padding: 10px;
     border-radius: 50px;
     color: var(--primary-white);
-    background-color: var(--sec-azure);
+    background-color: var(--sec-blue);
     
     transform: scale(1);
     transition: transform 1s;
  
 }
+
  /* on hover translate sclae should increase on hover. and the color of text should be yellow when background is purple and vice versa.  */
 
 
@@ -578,7 +578,7 @@ background-color: var(--sec-azure);
 }
 .heighlights{
     background-color: rgb(250, 252, 249);
-    color: #347e92;
+    color: #150e82;
 }
 .cta-buttons {
     display: flex;
@@ -602,7 +602,7 @@ background-color: var(--sec-azure);
     position: relative;
     overflow: hidden;
       background: var(--primary-white) ;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     border: 2px solid var(--primary-purple);
 
 }
@@ -675,7 +675,7 @@ background-color: var(--sec-azure);
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg,  var(--primary-azure), var(--sec-azure), var(--sec-azure) , var(--primary-white));
+            background: linear-gradient(45deg,  var(--primary-azure), var(--sec-blue), var(--sec-blue) , var(--primary-white));
             -webkit-background-clip: text;
 
             -webkit-text-fill-color: transparent;
@@ -686,7 +686,7 @@ background-color: var(--sec-azure);
 
         .about-subtitle {
             font-size: 1.5rem;
-            color: var(--sec-azure);
+            color: var(--sec-blue);
             margin-bottom: 2rem;
             font-weight: 600;
             opacity: 0;
@@ -696,7 +696,7 @@ background-color: var(--sec-azure);
         .about-description {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: var(--sec-azure);
+            color: var(--sec-blue);
             max-width: 800px;
             margin: 0 auto 3rem;
             opacity: 0;
@@ -731,14 +731,14 @@ background-color: var(--sec-azure);
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 2rem;
-            color: #347e92;
+            color: #150e82;
             
          }
 
         .mission-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--sec-azure);
+            color: var(--sec-blue);
             font-weight: 500;
             margin-bottom: 2rem;
         }
@@ -827,18 +827,18 @@ background-color: var(--sec-azure);
     font-weight: 800;
     margin-bottom: 2rem;
     
-    color: var(--sec-azure);
+    color: var(--sec-blue);
 }
 
 .mission-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     margin-bottom: 2rem;
 }
 
 .mission-highlight {
-   background: var(--sec-azure);
+   background: var(--sec-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -857,7 +857,7 @@ background-color: var(--sec-azure);
 .mission-card {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--sec-azure), var(--primary-azure) , transparent , rgb(221, 69, 115) );
+    background: linear-gradient(135deg, var(--sec-blue), var(--primary-azure) , transparent , rgb(221, 69, 115) );
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
     display: flex;
@@ -899,6 +899,8 @@ background-color: var(--sec-azure);
 .services {
     padding: 8rem 2rem;
     background-color: rgb(238, 226, 226);
+          background: url(agency4.jpg) no-repeat center/cover fixed;
+
     position: relative;
     
    
@@ -917,7 +919,7 @@ background-color: var(--sec-azure);
     margin-bottom: 3rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
-    color: #347e92;
+    color: white    ;
       font-family: var(--font-raleway);
 }
 
@@ -931,7 +933,7 @@ background-color: var(--sec-azure);
 .service-card {
   
     backdrop-filter: blur(10px);
-    border: 1px solid var(--sec-azure);
+    border: 1px solid var(--sec-blue);
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
@@ -955,7 +957,7 @@ background-color: var(--sec-azure);
 
 .service-icon {
     font-size: 3rem;
-    color: var(--sec-azure);
+    color: var(--primary-white);
     margin-bottom: 1rem;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -964,70 +966,190 @@ background-color: var(--sec-azure);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--sec-azure);   
+    color: var(--primary-white);   
 }
 
 .service-card p {
-    color: var(--sec-azure);
+    color: var(--primary-white);
     line-height: 1.6;
 }
 .service-btn{
     padding: 10px;
-    border: solid 1px var(--sec-azure);
+    border: solid 1px var(--sec-blue);
     border-radius: 50px;
-    background-color: var(--sec-azure);
+    background-color: var(--sec-blue);
     color: var(--primary-white);
 }
 a{
     text-decoration: none;
     color: var(--primary-white);
 }
+ section.consult-page {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* consultation page css here  */
-.consult{
-    background: var(--primary-white);
-    padding:  2rem;
-    color: var(--sec-azure);
-  
-    place-items: center;
-    
-}
-.consult h1{
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0 auto 1rem;
-    max-width: 1200px;
-    color: var(--sec-azure);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.consult p{
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-    /* color: #ffffff; */
-    color: var(--sec-azure);
-    font-size: 1.2em;
-}
+    header.consult-hero {
+      background: url(agency.jpg) no-repeat center/cover fixed;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
 
-.consult-box {
-    padding: 50px;
-}
+    header.consult-hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(21, 14, 130, 0.7);
+    }
 
+    header.consult-hero .consult-hero-content {
+      position: relative;
+      z-index: 1;
+    }
 
-.consult-box .right img{
-    width: 80%;
-    height: 80%;
-    border-radius: 16px;
-    box-shadow: 0 16px 32px  rgb(240, 171, 223);
-margin-left: 100px;
-}
-@media (max-width: 900px){
-    .consult-box{ grid-template-columns: 1fr; }
-}
-@media (max-width: 480px){
-    .consult{ padding: 4rem 1rem; }
-    .consult h1{ font-size: 2rem; }
-}
+    header.consult-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-family: 'Lora', serif;
+    }
 
+    header.consult-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .consult-btn {
+      color: #150e82;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .consult-btn:hover {
+      background: #2c1aa0;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Info section */
+    .consult-info-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .consult-info-card {
+      background: #f7f7ff;
+      border-left: 5px solid #150e82;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .consult-info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .consult-info-card i {
+      font-size: 2.5rem;
+      color: #150e82;
+      margin-bottom: 15px;
+    }
+
+    .consult-info-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #150e82;
+    }
+
+    /* Form section */
+    .consult-form-section {
+      text-align: center;
+      padding: 100px 20px;
+      
+    }
+
+    .consult-form-section h2 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #150e82;
+    }
+
+    .consult-form-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .consult-form-card:hover {
+      transform: scale(1.02);
+    }
+
+    form.consult-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    form.consult-form input, form.consult-form select, form.consult-form textarea, form.consult-form button {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    form.consult-form input, form.consult-form select, form.consult-form textarea {
+      background: #f9f9ff;
+    }
+
+    form.consult-form button {
+      background: #150e82;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      border: none;
+    }
+
+    form.consult-form button:hover {
+      background: #2c1aa0;
+    }
+
+    /* Viewport fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* the opinion section css here  */
 .opinions-section{
     padding: 4rem 2rem;
     background: var(--primary-white);
@@ -1037,7 +1159,7 @@ margin-left: 100px;
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
 }
 .opinions{
     max-width: 1200px;
@@ -1064,13 +1186,13 @@ margin-left: 100px;
     padding: 1rem 1.25rem 1.5rem;
 }
 .opinion-quote{
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 .opinion-meta{
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     font-weight: 600;
 }
 @media (max-width: 900px){
@@ -1087,7 +1209,7 @@ margin-left: 100px;
 /* Stats Section */
 .stats {
     padding:  2rem;
-   background-color: var(--sec-azure);
+   background-color: var(--sec-blue);
    /* background-color: rgb(245, 220, 228); */
     position: relative;
     margin-top: 50px;
@@ -1110,7 +1232,7 @@ margin-left: 100px;
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     color: var(--primary-white);
     display: block;
     margin-bottom: 0.5rem;
@@ -1119,7 +1241,7 @@ margin-left: 100px;
 .stat-label {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--sec-azure);
+    color: var(--sec-blue);
     color: var(--primary-white);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1357,6 +1479,7 @@ margin-left: 100px;
 
     .mission-visual {
         height: 400px;
+       
     }
 
     .services-grid {
